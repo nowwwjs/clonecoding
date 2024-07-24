@@ -88,7 +88,7 @@ ul {
 #hd6 {
   display: none; /* 기본적으로 숨겨짐 */
   position: absolute;
-  top: 160%; /* hd3 바로 아래에 위치 */
+  top: 35%; /* hd3 바로 아래에 위치 */
   left: 0;
   width: 100%;
   height: auto;
@@ -99,7 +99,7 @@ ul {
 }
 
 #hd3:hover #hd6 {
-  display: block; /* 마우스를 올렸을 때 보이도록 설정 */
+  display: block; 
 }
 
 .dropdown {
@@ -182,7 +182,7 @@ input[type="text"]::placeholder {
   cursor: pointer;
 }
 
-#circle1 {
+.circle1 {
   border: 1px solid #e2e2e2;
   border-radius: 30px;
   box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.05);
@@ -276,6 +276,7 @@ input[type="text"]::placeholder {
   display: flex;
   gap: 50px;
   margin: 0 auto;
+  margin-bottom: 80px;
 }
 
 #event-img1, #event-img2 {
@@ -283,6 +284,7 @@ input[type="text"]::placeholder {
   flex-direction: column; /* 자식 요소를 세로로 정렬 */
   align-items: center; /* 자식 요소를 중앙 정렬 */
   width: 330px; /* 너비 설정 */
+  overflow: hidden;
 }
 
 #event-img1 img, #event-img2 img {
@@ -291,7 +293,15 @@ input[type="text"]::placeholder {
   cursor: pointer;
   border: 1px solid white;
   border-radius: 5%;
+  transition: transform 0.3s ease;
 }
+
+#event-img1 img:hover,
+#event-img2 img:hover {
+  transform: scale(1.1); 
+}
+
+
 
 #event-img1 h4, #event-img2 h4 {
   color: gray;
@@ -307,6 +317,35 @@ input[type="text"]::placeholder {
   display: block; /* 블록 레벨 요소로 설정 */
   margin: 0; /* 기본 마진 제거 */
   margin-top: -10px;
+}
+
+#special1 {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+#special-text {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#special2 {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  gap: 50px;
+}
+
+#special-image img {
+  width: 600px;
+  height: 300px;
+}
+
+.list {
+  border-top: 1px solid gray;
 }
 
 

@@ -301,8 +301,6 @@ input[type="text"]::placeholder {
   transform: scale(1.1); 
 }
 
-
-
 #event-img1 h4, #event-img2 h4 {
   color: gray;
   align-self: flex-start;

@@ -1,9 +1,9 @@
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  width: 100%;
-  overflow-x: hidden;
+  height: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 #hd1 {
@@ -38,35 +38,77 @@ body, html {
   letter-spacing: 6px;
 }
 
-#sp2, #sp3, #sp4, #sp5 {
+#sp2,
+#sp3,
+#sp4,
+#sp5 {
   position: absolute;
   top: 66%;
   font-size: 15px;
 }
 
-#sp2 { left: 70%; }
-#sp3 { left: 78%; }
-#sp4 { left: 86%; }
-#sp5 { left: 94%; }
+#sp2 {
+  left: 70%;
+}
+#sp3 {
+  left: 78%;
+}
+#sp4 {
+  left: 86%;
+}
+#sp5 {
+  left: 94%;
+}
 
-#im0, #im1, #im2, #im3, #im4, #im5 {
+#im0,
+#im1,
+#im2,
+#im3,
+#im4,
+#im5 {
   position: absolute;
   cursor: pointer;
 }
 
-#im0 { width: 12%; top: 28%; left: 1%; }
-#im1 { width: 12%; bottom: 30%; left: 52%; }
-#im2 { width: 4%; top: 28%; left: 70%; }
-#im3 { width: 4%; top: 28%; left: 78%; }
-#im4 { width: 4%; top: 28%; left: 86%; }
-#im5 { width: 4%; top: 28%; left: 94%; }
-
+#im0 {
+  width: 12%;
+  top: 28%;
+  left: 1%;
+}
+#im1 {
+  width: 12%;
+  bottom: 30%;
+  left: 52%;
+}
+#im2 {
+  width: 4%;
+  top: 28%;
+  left: 70%;
+}
+#im3 {
+  width: 4%;
+  top: 28%;
+  left: 78%;
+}
+#im4 {
+  width:4%;
+  top: 28%;
+  left: 86%;
+}
+#im5 {
+  width: 4%;
+  top: 28%;
+  left: 94%;
+}
 
 #hd3 {
+  position: sticky;
   width: 100vw;
   height: 40px;
   border-top: 1px solid lightgray;
   margin-top: 20px;
+  z-index: 1000; /* 다른 콘텐츠 위에 위치하도록 설정 */
+  
 }
 
 ul {
@@ -79,27 +121,28 @@ ul {
   gap: 60px;
   font-size: 20px;
   margin-top: 20px;
-  border-right: 1.5px solid darkgray;
+  border-right: 1.5px solid darkgray;   
   cursor: pointer;
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
   font-weight: bold;
 }
 
 #hd6 {
   display: none; /* 기본적으로 숨겨짐 */
   position: absolute;
-  top: 35%; /* hd3 바로 아래에 위치 */
+  top: 140%; /* hd3 바로 아래에 위치 */
   left: 0;
   width: 100%;
   height: auto;
   background-color: #fff;
   box-sizing: border-box;
-  z-index: 1;
+  z-index: 2000; /* 다른 콘텐츠보다 위에 나타나도록 설정 */
   text-align: center;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 #hd3:hover #hd6 {
-  display: block; 
+  display: block;
 }
 
 .dropdown {
@@ -112,7 +155,7 @@ ul {
   width: 200px;
   top: 100%;
   padding: 10px;
-  border-right: 2px solid lightgray;  
+  border-right: 2px solid lightgray;
 }
 
 .dropdown:last-child {
@@ -156,17 +199,61 @@ input[type="text"]::placeholder {
 }
 
 #hd5 {
-  width: 100%; 
-  overflow: hidden; 
+  width: 100%;
+  height: 630px; 
+  overflow: hidden;
   margin-bottom: 50px;
+  position: relative;
 }
 
-#hd5 img {
+#hd5 video {
   margin-top: 30px;
-  width: 100%; 
-  height: auto;
-  object-fit: cover; 
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  position: relative; /* z-index가 적용되도록 설정 */
+  z-index: 1; /* 비디오 요소는 다른 요소보다 아래에 위치하도록 설정 */
 }
+
+#video-p1, #video-p2, #video-row {
+  position: absolute;
+  z-index: 3;
+  color: white; 
+}
+
+#video-p1 {
+  font-size: 50px;
+  font-weight: bold;
+  top: 27%;
+  left: 15%; 
+}
+
+#video-p2 {
+  font-size: 30px;
+  top: 45%; 
+  left: 15%; 
+}
+
+#video-row {
+  top: 67%; 
+  left: 15%; 
+  display: flex;
+  gap: 10px;
+}
+
+.circle2 {
+  width: 50px;
+  margin-left :20px ;
+  font-size: 30px;
+  border: 1px solid white;
+  border-radius: 50%;
+  display: flex; /* Flexbox를 사용 (선택 사항) */
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+
 
 #chart {
   font-size: 26px;
@@ -180,6 +267,12 @@ input[type="text"]::placeholder {
 
 #com {
   cursor: pointer;
+  font-size: 30px;
+}
+
+.thick {
+  font-size: 30px;
+  font-weight: bold;
 }
 
 .circle1 {
@@ -188,8 +281,8 @@ input[type="text"]::placeholder {
   box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.05);
   display: flex; /* Flexbox를 사용 (선택 사항) */
   align-items: center;
-  justify-content: center; 
-  width:110px ;
+  justify-content: center;
+  width: 110px;
   height: 50px;
   font-size: 20px;
   padding: 1px 10px 1px 10px;
@@ -219,7 +312,7 @@ input[type="text"]::placeholder {
 .big1 {
   font-size: 20px;
   font-weight: 600;
-  overflow: hidden; /* 넘치는 텍스트를 숨김 */
+  overflow: hidden; 
   text-overflow: ellipsis; /* 넘치는 텍스트를 "..."으로 표시 */
   white-space: nowrap; /* 텍스트가 줄 바꿈되지 않도록 설정 */
   width: 100%; /* 부모 요소의 너비를 따르도록 설정 */
@@ -251,10 +344,10 @@ input[type="text"]::placeholder {
   border: 1px solid#e2e2e2;
   border-radius: 50%;
   width: 50px;
-  height:50px;
+  height: 50px;
   text-align: center;
   cursor: pointer;
-  line-height: 50px; 
+  line-height: 50px;
 }
 
 #whole1 {
@@ -263,9 +356,9 @@ input[type="text"]::placeholder {
   box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.05);
   display: flex; /* Flexbox를 사용 (선택 사항) */
   align-items: center;
-  justify-content: center; 
-  width:110px ;
-  height:50px;
+  justify-content: center;
+  width: 110px;
+  height: 50px;
   font-size: 20px;
   padding: 1px 10px 1px 10px;
   cursor: pointer;
@@ -279,7 +372,8 @@ input[type="text"]::placeholder {
   margin-bottom: 80px;
 }
 
-#event-img1, #event-img2 {
+#event-img1,
+#event-img2 {
   display: flex; /* 플렉스를 사용하여 자식 요소를 정렬 */
   flex-direction: column; /* 자식 요소를 세로로 정렬 */
   align-items: center; /* 자식 요소를 중앙 정렬 */
@@ -298,22 +392,24 @@ input[type="text"]::placeholder {
 
 #event-img1 img:hover,
 #event-img2 img:hover {
-  transform: scale(1.1); 
+  transform: scale(1.1);
 }
 
-#event-img1 h4, #event-img2 h4 {
+#event-img1 h4,
+#event-img2 h4 {
   color: gray;
   align-self: flex-start;
-  margin-top: -12px; 
+  margin-top: -12px;
 }
 
-#event-img1 h3, #event-img2 h3 {
-  overflow: hidden; /* 넘치는 텍스트를 숨김 */
-  text-overflow: ellipsis; /* 넘치는 텍스트를 "..."으로 표시 */
-  white-space: nowrap; /* 텍스트가 줄 바꿈되지 않도록 설정 */
-  width: 100%; /* 부모 요소의 너비를 따르도록 설정 */
-  display: block; /* 블록 레벨 요소로 설정 */
-  margin: 0; /* 기본 마진 제거 */
+#event-img1 h3,
+#event-img2 h3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  display: block;
+  margin: 0;
   margin-top: -10px;
 }
 
@@ -342,14 +438,85 @@ input[type="text"]::placeholder {
   height: 300px;
 }
 
+#special-list {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+  margin-bottom: 100px;
+}
+
 .list {
+  width: 90%;
+  margin: 0 auto;
   border-top: 1px solid gray;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.list-bold {
+  font-size: 25px;
+  margin-left:20px;
+  margin-top: 20px;
+}
+
+.gray {
+  font-size: 20px;
+  color: gray;
+  background-color: #f6f6f6;
+  border: 1px solid white;
+  border-radius: 1  0px;
+  margin-right:20px;
+  margin-top: 20px;
 }
 
 
+#search {
+  width: 15%;
+  position: relative;
+  left: 67%;
+  height: 28px;
+  margin-top: 20px;
+  border-right: 1.5px solid darkgray;
+}
 
+input[type="text"] {
+  width: 90%;
+  height: 80%;
+  top: 10%;
+  position: absolute;
+  left: 5%;
+  font-size: 20px;
+  border: none;
+}
 
+#package {
+  width: 70%;
+  margin: 0 auto;
+  height: 350px;
+  display: flex;
+  justify-content: space-between;
+}
 
+.buy {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
 
+.buy-title {
+  display: flex;
+  justify-content: space-between;
+}
 
+.buy-content {
+  display: flex;
+  flex-direction: row;
+}
 
+.buy-content img {
+  width: 60px;
+  height: 80px;
+}

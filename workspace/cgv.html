@@ -12,7 +12,6 @@
 
 <body>
   <header>
-
     <!-- 배너 -->
     <div id="hd1">
       <img src="image/0번.png" alt="Logo" />
@@ -111,20 +110,22 @@
       </div>
     </div>
   </header>
+
   <main>
-    
+    <!-- section 1 -->
     <!-- 큰 광고창 -->
     <div id="hd5">
       <video src="./image/video.mp4" controls autoplay></video>
       <p id="video-p1">파일럿</p>
       <p id="video-p2">웃음 공감 다잡은 <br>일등석 코미디</p>
       <div id="video-row">
-        <div class="circle1">상세보기 ></div>
-        <div class="circle2">▷</div>
-        <div class="circle2">♬</div>
+        <div class="circle1">상세보기</div>
+        <div class="circle3">▷</div>
+        <div class="circle3">♬</div>
       </div>
     </div>
 
+    <!-- section 2 -->
 
     <!-- 무비차트 전체보기 -->
     <div id="chart">
@@ -141,31 +142,57 @@
     <div id="rc">
       <div class="movie">
         <img src="./image/movie1.jpg" />
+        <i class="fa-solid fa-1"></i>
         <p class="big1">데드풀과 울버린</p>
         <p class="small1"><i class="fa-solid fa-egg"></i> 99% 예매율 44.0%</p>
+        <div class="overlay">
+          <button id="button1">상세보기</button>
+          <button id="button2">예매하기</button>
+        </div>
       </div>
       <div class="movie">
         <img src="./image/movie2.jpg" />
+        <i class="fa-solid fa-2"></i>
         <p class="big1">파일럿</p>
         <p class="small1"><i class="fa-solid fa-egg"></i> 99% 예매율 16.0%</p>
+        <div class="overlay">
+          <button id="button1">상세보기</button>
+          <button id="button2">예매하기</button>
+        </div>
       </div>
       <div class="movie">
         <img src="./image/movie3.jpg" />
+        <i class="fa-solid fa-3"></i>
         <p class="big1">슈퍼밴드 4</p>
         <p class="small1"><i class="fa-solid fa-egg"></i> 99% 예매율 6.3%</p>
+        <div class="overlay">
+          <button id="button1">상세보기</button>
+          <button id="button2">예매하기</button>
+        </div>
       </div>
       <div class="movie">
         <img src="./image/movie4.jpg" />
+        <i class="fa-solid fa-4"></i>
         <p class="big1">명탐전 코난 -100만 달성 기념</p>
         <p class="small1"><i class="fa-solid fa-egg"></i> 94% 예매율 5.7%</p>
+        <div class="overlay">
+          <button id="button1">상세보기</button>
+          <button id="button2">예매하기</button>
+        </div>
       </div>
       <div class="movie">
         <img src="./image/movie5.jpg" />
+        <i class="fa-solid fa-5"></i>
         <p class="big1">탈주</p>
         <p class="small1"><i class="fa-solid fa-egg"></i> 99% 예매율 4.2%</p>
+        <div class="overlay">
+          <button id="button1">상세보기</button>
+          <button id="button2">예매하기</button>
+        </div>
       </div>
     </div>
 
+    <!-- section 3  -->
     <!-- 이벤트1 -->
     <div id="event">
       <div id="one">EVENT</div>
@@ -177,23 +204,33 @@
 
     <!-- 이벤트2 -->
     <div id="event2">
-      <div id="event-img1">
+      <div class="event-img">
         <img src="./image/event1.jpg" />
         <p>
         <h3>
           <깊이 빠져 보다: ALBERT>
-            </h1>
-            </p>
-            <h4>2024.07.22~2024.08.31</h4>
+        </h3>
+        </p>
+        <h4>2024.07.22~2024.08.31</h4>
       </div>
-      <div id="event-img2">
+      <div class="event-img">
         <img src="./image/event2.jpg" />
         <p>
         <h3>서프라이즈 ONLY [극장판 도라에몽] 5천원</h3>
         </p>
         <h4>2024.07.18~2024.07.23</h4>
       </div>
+
+      <div class="event-img">
+        <img src="./image/event3.jpg" />
+        <p>
+        <h3>[트위스터스]최초 상영특별관 시사회</h3>
+        </p>
+        <h4>2024.07.26~2024.07.30</h4>
+      </div>
     </div>
+
+    <!-- section 4 -->
 
     <!-- 특별관 1-->
     <div id="special1">
@@ -227,12 +264,16 @@
       </div>
     </div>
 
-    <!-- 패키지 , 관람권  -->
+    <!-- section 5  -->
     <div id="package">
+
+      <!-- 패키지 -->
       <div class="buy">
         <div class="buy-title">
           <span class="title3">패키지</span>
-          <span class="more">더보기</span>
+          <div class="circle2">
+            <span class="more">더보기</span>
+          </div>
         </div>
         <div class="buy-content">
           <img src="./image/pk1.jpg" alt="사진">
@@ -246,53 +287,59 @@
         <div class="buy-content">
           <img src="./image/pk2.jpg" alt="사진">
           <div class="combine1">
-            <h2>우리 패키지</h2>
-            <h2 class="money">62,000원</h2>
+            <h2 class="money">우리 패키지</h2>
+            <h2>62,000원</h2>
           </div>
         </div>
         <div class="buy-content">
           <img src="./image/pk3.jpg" alt="사진">
           <div class="combine1">
-            <h2>나랑 너 패키지</h2>
-            <h2 class="money">35,000원</h2>
+            <h2 class="money">나랑 너 패키지</h2>
+            <h2>35,000원</h2>
           </div>
         </div>
       </div>
 
+      <!-- 관람권 -->
       <div class="buy">
         <div class="buy-title">
           <span class="title3">영화관람권</span>
-          <span class="more">더보기</span>
+          <div class="circle2">
+            <span class="more">더보기</span>
+          </div>
         </div>
         <div class="buy-content">
           <img src="./image/mv1.jpg" alt="사진">
           <div class="combine1">
-            <h2>
+            <h2 class="money">
               CGV 영화관람권
             </h2>
-            <h2 class="money">13,000원</h2>
+            <h2>13,000원</h2>
           </div>
         </div>
         <div class="buy-content">
           <img src="./image/mv2.jpg" alt="사진">
           <div class="combine1">
-            <h2>IMAX 영화관람권</h2>
-            <h2 class="money">18,000원</h2>
+            <h2 class="money">IMAX 영화관람권</h2>
+            <h2>18,000원</h2>
           </div>
         </div>
         <div class="buy-content">
           <img src="./image/mv3.jpg" alt="사진">
           <div class="combine1">
-            <h2>4DX 영화관람권</h2>
-            <h2 class="money">19,000원</h2>
+            <h2 class="money">4DX 영화관람권</h2>
+            <h2>19,000원</h2>
           </div>
         </div>
       </div>
 
+      <!-- 기프트카드 -->
       <div class="buy">
         <div class="buy-title">
           <span class="title3">기프트카드</span>
-          <span class="more">더보기</span>
+          <div class="circle2">
+            <span class="more">더보기</span>
+          </div>
         </div>
         <div class="buy-content">
           <img src="./image/gf1.jpg" alt="사진">
@@ -318,17 +365,99 @@
           </div>
         </div>
       </div>
-
     </div>
 
+    <!-- section 6 -->
+    <div id="section6">
+      <div id="s6_left">
+        <div id="left_left">
+          <div id="alert">
+            <span class="bold2">공지사항</span>
+            <span>[기타][CGV]해피머니상품권 사용중지 안내</span>
+            <span class="circle3">더보기</span>
+          </div>
+          <div id="center">
+            <span class="bold2">고객센터&nbsp;&nbsp;&nbsp;</span>
+            <span class="bold2">1544-1122</span>
+            <br>
+            <span id="center-time">고객센터 운영시간 (평일 09:00~18:00)</span>
+            <br>
+            <span id="center-time"> 업무시간 외 자동응답 안내 가능합니다.</span>
 
-
-
-
+            <div id="center-div">
+              <div class="ask">FAQ</div>
+              <div class="ask">1:1문의</div>
+              <div class="ask">대관/단체 문의</div>
+            </div>
+          </div>
+        </div>
+        <div id="left_right">
+          <span class="bold2">앱 다운로드</span>
+          <span class="small2">CGV앱에서 더 편리하게 이용하세요</span>
+          <img src="./image/qr.png" />
+          <span class="small2">QR코드를 스캔하고<br>앱설치를 페이지로 바로 이동하세요</span>
+        </div>
+      </div>
+      <div id="s6_right">
+        <img src="./image/bugs.png" alt="사진">
+      </div>
+    </div>
   </main>
 
+  <!-- 푸터  -->
   <footer>
+    <div id="footer-container">
+      <div id="credit">
+        <span>회사소개</span>
+        <span>지속가능</span>
+        <span>IR</span>
+        <span>채용정보</span>
+        <span>광고/제휴/출점문의</span>
+        <span>이용약관</span>
+        <span>편성기준</span>
+        <span id="bold3">개인정보처리방침</span>
+        <span>법적고지</span>
+        <span>이메일주소무단수집거부</span>
+        <span>윤리경영</span>
+        <span>사이버감사실</span>
 
+      </div>
+      <div id="info">
+        <span>(04377)서울특별시 용산구 한강대로 23길 55, 아이파크몰 6층(한강로동)</span><br>
+        <span>대표이사 : 허민회 사업자등록번호 : 104-81-45690 통신판매업신고번호 : 2017-서울용산-0662 사업자정보확인</span><br>
+        <span>호스팅사업자 : CJ올리브네트웍스 개인정보보호 책임자 : 도형구 대표이메일 : cjcgvmaster@cj.net</span><br>
+        <span>© CJ CGV. All Rights Reserved</span>
+        <form>
+          <select id="city" name="city">
+            <option value="" disabled selected>계열사 바로가기</option>
+            <optgroup label="CJ그룹">
+              <option>CJ주식회사</option>
+            </optgroup>
+            <optgroup label="식품 & 식품서비스">
+              <option>CJ제일제당</option>
+              <option>CJ푸드빌</option>
+              <option>CJ프레시웨이</option>
+            </optgroup>
+            <optgroup label="생명공학">
+              <option>CJ제일제당 BIO사업부문</option>
+              <option>CJ Feed&Card</option>
+            </optgroup>
+            <optgroup label="물류 & 신유통">
+              <option>CJ대한통운</option>
+              <option>CJ대한통운 건설부문</option>
+              <option>CJ올리브영</option>
+              <option>CJ올리브네트웍스스</option>
+              <option>CJ ENM 커머스부문</option>
+            </optgroup>
+            <optgroup label="엔터테인먼트 & 미디어">
+              <option>CJ ENM 엔터테인먼트부문</option>
+              <option>CJ CGV</option>
+            </optgroup>
+          </select>
+          <input type="button" value="GO">
+        </form>
+      </div>
+    </div>
   </footer>
 </body>
 

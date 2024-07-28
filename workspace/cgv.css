@@ -24,7 +24,7 @@ html {
 }
 
 #hd2 {
-  width: 70%;
+  width: 60%;
   height: 130px;
   margin: 0 auto;
   position: relative;
@@ -48,16 +48,20 @@ html {
 }
 
 #sp2 {
-  left: 70%;
+  top: 74%;
+  left: 70.7%;
 }
 #sp3 {
-  left: 78%;
+  top: 74%;
+  left: 78.4%;
 }
 #sp4 {
-  left: 86%;
+  top: 74%;
+  left: 86.5%;
 }
 #sp5 {
-  left: 94%;
+  top: 74%;
+  left: 94.4%;
 }
 
 #im0,
@@ -91,7 +95,7 @@ html {
   left: 78%;
 }
 #im4 {
-  width:4%;
+  width: 4%;
   top: 28%;
   left: 86%;
 }
@@ -108,7 +112,6 @@ html {
   border-top: 1px solid lightgray;
   margin-top: 20px;
   z-index: 1000; /* 다른 콘텐츠 위에 위치하도록 설정 */
-  
 }
 
 ul {
@@ -121,7 +124,7 @@ ul {
   gap: 60px;
   font-size: 20px;
   margin-top: 20px;
-  border-right: 1.5px solid darkgray;   
+  border-right: 1.5px solid darkgray;
   cursor: pointer;
   font-family: "Noto Sans KR", sans-serif;
   font-weight: bold;
@@ -200,7 +203,7 @@ input[type="text"]::placeholder {
 
 #hd5 {
   width: 100%;
-  height: 630px; 
+  height: 630px;
   overflow: hidden;
   margin-bottom: 50px;
   position: relative;
@@ -215,49 +218,39 @@ input[type="text"]::placeholder {
   z-index: 1; /* 비디오 요소는 다른 요소보다 아래에 위치하도록 설정 */
 }
 
-#video-p1, #video-p2, #video-row {
+#video-p1,
+#video-p2,
+#video-row {
   position: absolute;
   z-index: 3;
-  color: white; 
+  color: white;
 }
 
 #video-p1 {
   font-size: 50px;
   font-weight: bold;
   top: 27%;
-  left: 15%; 
+  left: 15%;
 }
 
 #video-p2 {
   font-size: 30px;
-  top: 45%; 
-  left: 15%; 
+  top: 45%;
+  left: 15%;
 }
 
 #video-row {
-  top: 67%; 
-  left: 15%; 
+  width: 13%;
+  height: 100px;
+  top: 67%;
+  left: 15%;
   display: flex;
   gap: 10px;
 }
 
-.circle2 {
-  width: 50px;
-  margin-left :20px ;
-  font-size: 30px;
-  border: 1px solid white;
-  border-radius: 50%;
-  display: flex; /* Flexbox를 사용 (선택 사항) */
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-
-
-
 #chart {
   font-size: 26px;
-  width: 70%;
+  width: 60%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -282,37 +275,116 @@ input[type="text"]::placeholder {
   display: flex; /* Flexbox를 사용 (선택 사항) */
   align-items: center;
   justify-content: center;
-  width: 110px;
+  width: 6vw;
   height: 50px;
   font-size: 20px;
   padding: 1px 10px 1px 10px;
   cursor: pointer;
 }
 
+.overlay button {
+  width: 200%;
+  height: 200%;
+}
+
 #rc {
   display: flex;
-  gap: 20px; /* 요소 간의 간격 설정 */
-  width: 70%;
+  justify-content: space-between;
+  width: 60%;
   margin: 0 auto;
   margin-bottom: 100px;
+  margin-left: 18%;
 }
 
 .movie {
-  width: 250px; /* 너비 설정 (필요에 따라 조정) */
+  width: 20%;
   text-align: center;
+  margin-top: 20px;
+  position: relative;
+}
+
+.overlay {
+  top: 25%;
+  left: 30%;
+  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#button1 {
+  cursor: pointer;
+  border: 1px solid white;
+  border-radius: 5px;
+  font-weight: bold;
+  color: gray;
+}
+
+#button2 {
+  cursor: pointer;
+  background-color: #fb4357;
+  color: white;
+  border: 1px solid #fb4357;
+  border-radius: 5px;
+  font-weight: bold;
 }
 
 .movie img {
-  width: 200px; /* 이미지가 부모 요소의 너비를 따르도록 설정 */
+  width: 90%; /* 이미지가 부모 요소의 너비를 따르도록 설정 */
   height: auto; /* 이미지 비율 유지 */
   border: 1px solid white;
   border-radius: 10%;
 }
 
+.fa-solid.fa-1,
+.fa-solid.fa-2,
+.fa-solid.fa-3,
+.fa-solid.fa-4,
+.fa-solid.fa-5 {
+  position: absolute;
+  left: 12%;
+  top: 59%;
+  font-size: 52px;
+  color: white;
+}
+
+.movie:hover .fa-solid.fa-1 {
+  opacity: 0;
+}
+
+.movie:hover .fa-solid.fa-2 {
+  opacity: 0;
+}
+
+.movie:hover .fa-solid.fa-3 {
+  opacity: 0;
+}
+
+.movie:hover .fa-solid.fa-4 {
+  opacity: 0;
+}
+
+.movie:hover .fa-solid.fa-5 {
+  opacity: 0;
+}
+
+.movie:hover .overlay {
+  opacity: 1;
+}
+
+.movie:hover img {
+  filter: brightness(70%);
+}
+
 .big1 {
   font-size: 20px;
   font-weight: 600;
-  overflow: hidden; 
+  overflow: hidden;
   text-overflow: ellipsis; /* 넘치는 텍스트를 "..."으로 표시 */
   white-space: nowrap; /* 텍스트가 줄 바꿈되지 않도록 설정 */
   width: 100%; /* 부모 요소의 너비를 따르도록 설정 */
@@ -323,7 +395,7 @@ input[type="text"]::placeholder {
 }
 
 #event {
-  width: 70%;
+  width: 60%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -365,23 +437,21 @@ input[type="text"]::placeholder {
 }
 
 #event2 {
-  width: 70%;
+  width: 60%;
   display: flex;
   gap: 50px;
   margin: 0 auto;
   margin-bottom: 80px;
 }
 
-#event-img1,
-#event-img2 {
+.event-img {
   display: flex; /* 플렉스를 사용하여 자식 요소를 정렬 */
   flex-direction: column; /* 자식 요소를 세로로 정렬 */
-  align-items: center; /* 자식 요소를 중앙 정렬 */
-  width: 330px; /* 너비 설정 */
+  width: 30%; /* 너비 설정 */
   overflow: hidden;
 }
 
-#event-img1 img, #event-img2 img {
+.event-img img {
   width: 100%;
   height: 220px;
   cursor: pointer;
@@ -390,20 +460,17 @@ input[type="text"]::placeholder {
   transition: transform 0.3s ease;
 }
 
-#event-img1 img:hover,
-#event-img2 img:hover {
+.event-img img:hover {
   transform: scale(1.1);
 }
 
-#event-img1 h4,
-#event-img2 h4 {
+.event-img h4 {
   color: gray;
   align-self: flex-start;
   margin-top: -12px;
 }
 
-#event-img1 h3,
-#event-img2 h3 {
+.event-img h3 {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -414,7 +481,7 @@ input[type="text"]::placeholder {
 }
 
 #special1 {
-  width: 70%;
+  width: 60%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -427,14 +494,14 @@ input[type="text"]::placeholder {
 }
 
 #special2 {
-  width: 70%;
+  width: 60%;
   margin: 0 auto;
   display: flex;
   gap: 50px;
 }
 
 #special-image img {
-  width: 600px;
+  width: 500px;
   height: 300px;
 }
 
@@ -443,12 +510,12 @@ input[type="text"]::placeholder {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 50%;
+  width: 65%;
   margin-bottom: 100px;
 }
 
 .list {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   border-top: 1px solid gray;
   display: flex;
@@ -457,8 +524,8 @@ input[type="text"]::placeholder {
 }
 
 .list-bold {
-  font-size: 25px;
-  margin-left:20px;
+  font-size: 20px;
+  margin-left: 20px;
   margin-top: 20px;
 }
 
@@ -467,11 +534,10 @@ input[type="text"]::placeholder {
   color: gray;
   background-color: #f6f6f6;
   border: 1px solid white;
-  border-radius: 1  0px;
-  margin-right:20px;
+  border-radius: 1 0px;
+  margin-right: 20px;
   margin-top: 20px;
 }
-
 
 #search {
   width: 15%;
@@ -493,17 +559,22 @@ input[type="text"] {
 }
 
 #package {
-  width: 70%;
+  width: 62%;
   margin: 0 auto;
-  height: 350px;
+  height: 450px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  margin-bottom: 50px;
 }
 
 .buy {
-  width: 30%;
+  width: 27%;
   display: flex;
   flex-direction: column;
+  gap: 10px;
+  border: 1px solid lightgray;
+  border-radius: 5%;
+  padding: 20px;
 }
 
 .buy-title {
@@ -511,12 +582,218 @@ input[type="text"] {
   justify-content: space-between;
 }
 
+.circle2 {
+  border: 1px solid #e2e2e2;
+  border-radius: 30px;
+  box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.05);
+  display: flex; /* Flexbox를 사용 (선택 사항) */
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 50px;
+  font-size: 20px;
+  padding: 1px 10px 1px 10px;
+  cursor: pointer;
+}
+
+.title3 {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.circle3 {
+  border: 1px solid #e2e2e2;
+  border-radius: 30px;
+  box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 12%;
+  height: 40%;
+  font-size: 20px;
+  padding: 1px 10px 1px 10px;
+  cursor: pointer;
+}
+
+.circle2 {
+  border: 1px solid #e2e2e2;
+  border-radius: 30px;
+  box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 23%;
+  height: 90%;
+  font-size: 20px;
+  padding: 1px 10px 1px 10px;
+  cursor: pointer;
+}
+
 .buy-content {
   display: flex;
   flex-direction: row;
+  gap: 10px;
+  margin-top: 20px;
 }
 
 .buy-content img {
-  width: 60px;
-  height: 80px;
+  width: 70px;
+  height: 90px;
+}
+
+.combine1 {
+  font-size: 12px;
+}
+
+#section6 {
+  width: 60%;
+  margin: 0 auto;
+  height: 30vh;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 150px;
+}
+
+#s6_left {
+  width: 77%;
+  height: 100%;
+  display: flex;
+  border: 1px solid lightgray;
+  border-radius: 20px;
+}
+
+#s6_right {
+  width: 20%;
+  height: 100%;
+}
+
+#s6_right img {
+  width: 100%;
+  height: 100%;
+  border: 1px solid white;
+  border-radius: 20px;
+}
+
+#left_left {
+  width: 70%;
+  height: 100%;
+}
+
+#left_right {
+  width: 30%;
+  height: 100%;
+  margin: 0 auto;
+  border-left: 1px solid lightgray;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+}
+
+#left_right img {
+  width: 30%;
+}
+
+.small2 {
+  font-size: 13px;
+  text-align: center;
+}
+
+#alert {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+  height: 30%;
+  border-bottom: 1px solid lightgray;
+}
+
+#center {
+  width: 90%;
+  margin: 0 auto;
+  height: 70%;
+  padding-top: 6%;
+  line-height: 30px;
+}
+
+.bold2 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#center-time {
+  margin-left: 21%;
+}
+
+#center-div {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.ask {
+  font-size: 18px;
+  width: auto;
+  height: 35px;
+  background-color: #f6f6f6;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid white;
+  border-radius: 8px;
+}
+
+footer {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  background-color: #f6f6f6;
+}
+
+#footer-container {
+  position: absolute;
+  width: 100%;
+  top: 60%;
+}
+
+#credit {
+  width: 65%;
+  height: 50px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ebebeb;
+  margin-bottom: 20px;
+}
+
+#info {
+  line-height: 25px;
+  width: 65%;
+  margin: 0 auto;
+}
+
+#info p {
+  margin-right: 60%;
+}
+
+#bold3 {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+footer form {
+  position: absolute;
+  right: 17%;
+  top: 60%;
+}
+
+select {
+  border: 2px solid black;
+  height: 50px;
+}
+
+input[type="button"] {
+  height: 50px;
+  width: 50px;
 }

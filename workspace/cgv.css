@@ -2,8 +2,54 @@ body,
 html {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+#scroll-book {
+  display: none;
+  position: fixed;
+  right: 12%;
+  z-index: 3000;
+  bottom: 12%;
+  width: 230px;
+  height: 60px;
+  justify-content: space-between;
+ 
+}
+
+#book {
+  width: 68%;
   height: 100%;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
+  background-color: rgb(251, 67, 87);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid white;
+  border-radius: 30px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#book a {
+    color: white;
+    text-decoration: none; 
+}
+
+#up {
+  width: 25%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  border: 1px solid black;
+  border-radius: 50%;
+  color: black;
+  font-size: 40px;
+  justify-content: center;
+  align-items: center;
+  font-weight: 100;
+  cursor: pointer;
 }
 
 #hd1 {
@@ -43,25 +89,21 @@ html {
 #sp4,
 #sp5 {
   position: absolute;
-  top: 66%;
+  top: 65%;
   font-size: 15px;
 }
 
 #sp2 {
-  top: 74%;
-  left: 70.7%;
+  left: 70%;
 }
 #sp3 {
-  top: 74%;
-  left: 78.4%;
+  left: 77.5%;
 }
 #sp4 {
-  top: 74%;
-  left: 86.5%;
+  left: 85.5%;
 }
 #sp5 {
-  top: 74%;
-  left: 94.4%;
+  left: 93%;
 }
 
 #im0,
@@ -86,22 +128,22 @@ html {
 }
 #im2 {
   width: 4%;
-  top: 28%;
+  top: 30%;
   left: 70%;
 }
 #im3 {
   width: 4%;
-  top: 28%;
+  top: 30%;
   left: 78%;
 }
 #im4 {
   width: 4%;
-  top: 28%;
+  top: 30%;
   left: 86%;
 }
 #im5 {
   width: 4%;
-  top: 28%;
+  top: 30%;
   left: 94%;
 }
 
@@ -111,10 +153,10 @@ html {
   height: 40px;
   border-top: 1px solid lightgray;
   margin-top: 20px;
-  z-index: 1000; /* 다른 콘텐츠 위에 위치하도록 설정 */
+  z-index: 1000;
 }
 
-ul {
+#hd3 ul {
   width: 50%;
   position: absolute;
   right: 33%;
@@ -131,15 +173,15 @@ ul {
 }
 
 #hd6 {
-  display: none; /* 기본적으로 숨겨짐 */
+  display: none;
   position: absolute;
-  top: 140%; /* hd3 바로 아래에 위치 */
+  top: 140%;
   left: 0;
   width: 100%;
   height: auto;
   background-color: #fff;
   box-sizing: border-box;
-  z-index: 2000; /* 다른 콘텐츠보다 위에 나타나도록 설정 */
+  z-index: 2000;
   text-align: center;
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
@@ -165,6 +207,79 @@ ul {
   border-right: none;
 }
 
+#scroll-banner {
+  width: 100%;
+  height: 8%;
+  position: fixed;
+  z-index: 4000;
+  top:0%;
+  background-color: rgb(215, 67, 87);
+  display: none;
+}
+
+#banner-wrapper {
+  width: 70%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  }
+
+#banner-1 {
+  width: 75%;
+  height: 40%;
+  margin-top: 1.5%;
+  line-height: 5px;
+  border-right: 0.5px solid black;
+  
+}
+
+#banner-1 ul {
+  width: 50%;
+  position: absolute;
+  right: 33%;
+  color: white;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+  font-size: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: bold;
+}
+
+#banner-1 img {
+  width:90px;
+  height: auto; 
+  position: relative;
+  bottom: 60%;
+
+}
+
+#banner-2 {
+  position: relative;
+  width: 25%;
+  height: 40%;
+  margin-top: 1.5%;
+  border-right: 0.5px solid black;
+}
+
+#input2 {
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  font-size: 20px;
+  border: none;
+  background-color:rgb(215, 67, 87);
+}
+
+#input2::placeholder {
+  color: white;
+  border: none;
+}
+
 .bold {
   font-weight: bold;
   font-size: 18px;
@@ -179,7 +294,7 @@ ul {
   border-right: 1.5px solid darkgray;
 }
 
-input[type="text"] {
+#input1 {
   width: 90%;
   height: 80%;
   top: 10%;
@@ -189,12 +304,13 @@ input[type="text"] {
   border: none;
 }
 
-input[type="text"]::placeholder {
+#input1::placeholder {
   color: black;
   border: none;
 }
 
 .cus1 {
+  margin-top: 5px;
   font-size: 23px;
   position: absolute;
   right: 3%;
@@ -214,8 +330,8 @@ input[type="text"]::placeholder {
   width: 100%;
   height: 600px;
   object-fit: cover;
-  position: relative; /* z-index가 적용되도록 설정 */
-  z-index: 1; /* 비디오 요소는 다른 요소보다 아래에 위치하도록 설정 */
+  position: relative;
+  z-index: 1;
 }
 
 #video-p1,
@@ -272,7 +388,7 @@ input[type="text"]::placeholder {
   border: 1px solid #e2e2e2;
   border-radius: 30px;
   box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.05);
-  display: flex; /* Flexbox를 사용 (선택 사항) */
+  display: flex;
   align-items: center;
   justify-content: center;
   width: 6vw;
@@ -287,21 +403,56 @@ input[type="text"]::placeholder {
   height: 200%;
 }
 
-#rc {
-  display: flex;
-  justify-content: space-between;
-  width: 60%;
+.slider {
+  position: relative;
+  width: 66%;
   margin: 0 auto;
-  margin-bottom: 100px;
-  margin-left: 18%;
 }
 
-.movie {
+.swiper {
+  display: flex;
+  justify-content: space-between;
+  width: 60vw;
+  padding: 0;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+
+.swiper-slide {
   width: 20%;
   text-align: center;
   margin-top: 20px;
-  position: relative;
 }
+
+.swiper-button-prev,
+.swiper-button-next {
+  background-color: aqua;
+  opacity: 0.5;
+  padding: 10px;  
+  border-radius: 20px;
+  color: black !important;
+}
+
+.slider2 {
+  position: relative;
+  width: 65%;
+  margin: 0 auto;
+}
+
+.swiper2 {
+  display: flex;
+  justify-content: space-between;
+  width: 60vw;
+  padding: 0;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+
+
+
+
+
+
 
 .overlay {
   top: 25%;
@@ -317,7 +468,7 @@ input[type="text"]::placeholder {
   transition: opacity 0.3s ease;
 }
 
-#button1 {
+#button-detail {
   cursor: pointer;
   border: 1px solid white;
   border-radius: 5px;
@@ -325,7 +476,7 @@ input[type="text"]::placeholder {
   color: gray;
 }
 
-#button2 {
+#button-book {
   cursor: pointer;
   background-color: #fb4357;
   color: white;
@@ -334,9 +485,9 @@ input[type="text"]::placeholder {
   font-weight: bold;
 }
 
-.movie img {
-  width: 90%; /* 이미지가 부모 요소의 너비를 따르도록 설정 */
-  height: auto; /* 이미지 비율 유지 */
+.swiper-slide img {
+  width: 90%;
+  height: auto;
   border: 1px solid white;
   border-radius: 10%;
 }
@@ -345,39 +496,36 @@ input[type="text"]::placeholder {
 .fa-solid.fa-2,
 .fa-solid.fa-3,
 .fa-solid.fa-4,
-.fa-solid.fa-5 {
+.fa-solid.fa-5,
+.fa-solid.fa-6,
+.fa-solid.fa-7,
+.fa-solid.fa-8,
+.fa-solid.fa-9 {
   position: absolute;
   left: 12%;
-  top: 59%;
+  top: 58%;
   font-size: 52px;
   color: white;
 }
 
-.movie:hover .fa-solid.fa-1 {
+.swiper-slide:hover .fa-solid.fa-1,
+.swiper-slide:hover .fa-solid.fa-2,
+.swiper-slide:hover .fa-solid.fa-3,
+.swiper-slide:hover .fa-solid.fa-4,
+.swiper-slide:hover .fa-solid.fa-5,
+.swiper-slide:hover .fa-solid.fa-6,
+.swiper-slide:hover .fa-solid.fa-7,
+.swiper-slide:hover .fa-solid.fa-8,
+.swiper-slide:hover .fa-solid.fa-9 {
   opacity: 0;
 }
 
-.movie:hover .fa-solid.fa-2 {
-  opacity: 0;
-}
 
-.movie:hover .fa-solid.fa-3 {
-  opacity: 0;
-}
-
-.movie:hover .fa-solid.fa-4 {
-  opacity: 0;
-}
-
-.movie:hover .fa-solid.fa-5 {
-  opacity: 0;
-}
-
-.movie:hover .overlay {
+.swiper-slide:hover .overlay {
   opacity: 1;
 }
 
-.movie:hover img {
+.swiper-slide:hover img {
   filter: brightness(70%);
 }
 
@@ -386,8 +534,8 @@ input[type="text"]::placeholder {
   font-weight: 600;
   overflow: hidden;
   text-overflow: ellipsis; /* 넘치는 텍스트를 "..."으로 표시 */
-  white-space: nowrap; /* 텍스트가 줄 바꿈되지 않도록 설정 */
-  width: 100%; /* 부모 요소의 너비를 따르도록 설정 */
+  white-space: nowrap;
+  width: 100%;
 }
 
 .small1 {
@@ -426,7 +574,7 @@ input[type="text"]::placeholder {
   border: 1px solid #e2e2e2;
   border-radius: 30px;
   box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.05);
-  display: flex; /* Flexbox를 사용 (선택 사항) */
+  display: flex;
   align-items: center;
   justify-content: center;
   width: 110px;
@@ -445,14 +593,14 @@ input[type="text"]::placeholder {
 }
 
 .event-img {
-  display: flex; /* 플렉스를 사용하여 자식 요소를 정렬 */
-  flex-direction: column; /* 자식 요소를 세로로 정렬 */
-  width: 30%; /* 너비 설정 */
+  display: flex;
+  flex-direction: column;
+  width: 30%;
   overflow: hidden;
 }
 
 .event-img img {
-  width: 100%;
+  width: 90%;
   height: 220px;
   cursor: pointer;
   border: 1px solid white;
@@ -500,10 +648,18 @@ input[type="text"]::placeholder {
   gap: 50px;
 }
 
-#special-image img {
+#sp-img2 , #sp-img3 , #sp-img4 {
+  display: none;
   width: 500px;
   height: 300px;
 }
+
+#sp-img1 {
+  display: block;
+  width: 500px;
+  height: 300px;
+}
+
 
 #special-list {
   height: 300px;
@@ -514,8 +670,9 @@ input[type="text"]::placeholder {
   margin-bottom: 100px;
 }
 
-.list {
+#list1 {
   width: 100%;
+  height: 25%;
   margin: 0 auto;
   border-top: 1px solid gray;
   display: flex;
@@ -523,6 +680,35 @@ input[type="text"]::placeholder {
   justify-content: space-between;
 }
 
+#list2 {
+  width: 100%;
+  height: 25%;
+  margin: 0 auto;
+  border-top: 1px solid gray;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#list3 {
+  width: 100%;
+  height: 25%;
+  margin: 0 auto;
+  border-top: 1px solid gray;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#list4 {
+  width: 100%;
+  height: 25%;
+  margin: 0 auto;
+  border-top: 1px solid gray;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .list-bold {
   font-size: 20px;
   margin-left: 20px;
@@ -586,7 +772,7 @@ input[type="text"] {
   border: 1px solid #e2e2e2;
   border-radius: 30px;
   box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.05);
-  display: flex; /* Flexbox를 사용 (선택 사항) */
+  display: flex;
   align-items: center;
   justify-content: center;
   width: 50%;

@@ -8,10 +8,24 @@
   <link rel="stylesheet" href="./cgv.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.4.1/swiper-bundle.css">
+  <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
 </head>
 
 <body>
+  <!-- 스크롤 -> 예매하기 버튼  -->
+  <div id="scroll-book">
+    <div id="book">
+      <a href="http://www.cgv.co.kr/ticket/"><span>예매하기</span></a>
+    </div>
+    <div id="up">
+      <span>↑</span>
+    </div>
+  </div>
+
   <header>
+
     <!-- 배너 -->
     <div id="hd1">
       <img src="image/0번.png" alt="Logo" />
@@ -46,7 +60,7 @@
 
 
       <div id="hd4">
-        <input type="text" id="email" name="" placeholder="봇치 더 록! 전편" />
+        <input type="text" id="input1" name="" placeholder="봇치 더 록! 전편" />
         <i class="fas fa-search cus1"></i>
       </div>
 
@@ -109,6 +123,29 @@
         </div>
       </div>
     </div>
+
+    <!-- 스크롤 할때 배너  -->
+    <div id="scroll-banner">
+      <div id="banner-wrapper">
+        <div id="banner-1">
+          <ul>
+            <li><img src="./image/1-2 cgv.png"></li>
+            <li>영화</li>
+            <li>극장</li>
+            <li>예매</li>
+            <li>스토어</li>
+            <li>이벤트</li>
+            <li>혜택</li>
+          </ul>
+        </div>
+
+        <div id="banner-2">
+          <input type="text" id="input2" name="" placeholder="봇치 더 록! 전편" />
+          <i class="fas fa-search cus1"></i>
+        </div>
+      </div>
+    </div>
+
   </header>
 
   <main>
@@ -127,70 +164,127 @@
 
     <!-- section 2 -->
 
-    <!-- 무비차트 전체보기 -->
+    <!-- 무비차트 목차 -->
     <div id="chart">
       <div id="com">
         <span class="thick">무비차트</span> |
-        <span>상영예정작</span>
+        <span class="soon">상영예정작</span>
       </div>
       <div class="circle1">
         <span>전체보기 ></span>
       </div>
     </div>
 
-    <!-- 차트 -->
-    <div id="rc">
-      <div class="movie">
-        <img src="./image/movie1.jpg" />
-        <i class="fa-solid fa-1"></i>
-        <p class="big1">데드풀과 울버린</p>
-        <p class="small1"><i class="fa-solid fa-egg"></i> 99% 예매율 44.0%</p>
-        <div class="overlay">
-          <button id="button1">상세보기</button>
-          <button id="button2">예매하기</button>
+    <!-- Slide && movie chart  -->
+    <div class="slider">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./image/movie1.jpg" />
+            <i class="fa-solid fa-1"></i>
+            <p class="big1">데드풀과 울버린</p>
+            <p class="small1"><i class="fa-solid fa-egg"></i> 99% 예매율 44.0%</p>
+            <div class="overlay">
+              <button id="button-details">상세보기</button>
+              <button id="button-book">예매하기</button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="./image/movie2.jpg" />
+            <i class="fa-solid fa-2"></i>
+            <p class="big1">파일럿</p>
+            <p class="small1"><i class="fa-solid fa-egg"></i> 99% 예매율 16.0%</p>
+            <div class="overlay">
+              <button id="button-details">상세보기</button>
+              <button id="button-book">예매하기</button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="./image/movie3.jpg" />
+            <i class="fa-solid fa-3"></i>
+            <p class="big1">슈퍼밴드 4</p>
+            <p class="small1"><i class="fa-solid fa-egg"></i> 99% 예매율 6.3%</p>
+            <div class="overlay">
+              <button id="button-details">상세보기</button>
+              <button id="button-book">예매하기</button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="./image/movie4.jpg" />
+            <i class="fa-solid fa-4"></i>
+            <p class="big1">명탐전 코난 -100만 달성 기념</p>
+            <p class="small1"><i class="fa-solid fa-egg"></i> 94% 예매율 5.7%</p>
+            <div class="overlay">
+              <button id="button-details">상세보기</button>
+              <button id="button-book">예매하기</button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="./image/movie5.jpg" />
+            <i class="fa-solid fa-5"></i>
+            <p class="big1">탈주</p>
+            <p class="small1"><i class="fa-solid fa-egg"></i> 99% 예매율 4.2%</p>
+            <div class="overlay">
+              <button id="button-details">상세보기</button>
+              <button id="button-book">예매하기</button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="./image/movie6.jpg" />
+            <i class="fa-solid fa-6"></i>
+            <p class="big1">사랑의 하츄핑</p>
+            <p class="small1"><i class="fa-solid fa-egg"></i> 99% 예매율 4.3%</p>
+            <div class="overlay">
+              <button id="button-details">상세보기</button>
+              <button id="button-book">예매하기</button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="./image/movie7.jpg" />
+            <i class="fa-solid fa-7"></i>
+            <p class="big1">인사이드 아웃2</p>
+            <p class="small1"><i class="fa-solid fa-egg"></i> 97% 예매율 3.9%</p>
+            <div class="overlay">
+              <button id="button-details">상세보기</button>
+              <button id="button-book">예매하기</button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="./image/movie8.jpg" />
+            <i class="fa-solid fa-8"></i>
+            <p class="big1">리볼버</p>
+            <p class="small1"><i class="fa-solid fa-egg"></i> 99% 예매율 2.6%</p>
+            <div class="overlay">
+              <button id="button-details">상세보기</button>
+              <button id="button-book">예매하기</button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="./image/movie9.jpg" />
+            <i class="fa-solid fa-9"></i>
+            <p class="big1">핸섬가이즈</p>
+            <p class="small1"><i class="fa-solid fa-egg"></i> 93% 예매율 1.3%</p>
+            <div class="overlay">
+              <button id="button-details">상세보기</button>
+              <button id="button-book">예매하기</button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="./image/movie10.jpg" />
+            <i class="fa-solid fa-9"></i>
+            <p class="big1">극장판 도라에몽-진구의 지구 교향곡</p>
+            <p class="small1"><i class="fa-solid fa-egg"></i> 92% 예매율 0.5%</p>
+            <div class="overlay">
+              <button id="button1">상세보기</button>
+              <button id="button2">예매하기</button>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="movie">
-        <img src="./image/movie2.jpg" />
-        <i class="fa-solid fa-2"></i>
-        <p class="big1">파일럿</p>
-        <p class="small1"><i class="fa-solid fa-egg"></i> 99% 예매율 16.0%</p>
-        <div class="overlay">
-          <button id="button1">상세보기</button>
-          <button id="button2">예매하기</button>
-        </div>
-      </div>
-      <div class="movie">
-        <img src="./image/movie3.jpg" />
-        <i class="fa-solid fa-3"></i>
-        <p class="big1">슈퍼밴드 4</p>
-        <p class="small1"><i class="fa-solid fa-egg"></i> 99% 예매율 6.3%</p>
-        <div class="overlay">
-          <button id="button1">상세보기</button>
-          <button id="button2">예매하기</button>
-        </div>
-      </div>
-      <div class="movie">
-        <img src="./image/movie4.jpg" />
-        <i class="fa-solid fa-4"></i>
-        <p class="big1">명탐전 코난 -100만 달성 기념</p>
-        <p class="small1"><i class="fa-solid fa-egg"></i> 94% 예매율 5.7%</p>
-        <div class="overlay">
-          <button id="button1">상세보기</button>
-          <button id="button2">예매하기</button>
-        </div>
-      </div>
-      <div class="movie">
-        <img src="./image/movie5.jpg" />
-        <i class="fa-solid fa-5"></i>
-        <p class="big1">탈주</p>
-        <p class="small1"><i class="fa-solid fa-egg"></i> 99% 예매율 4.2%</p>
-        <div class="overlay">
-          <button id="button1">상세보기</button>
-          <button id="button2">예매하기</button>
-        </div>
-      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
     </div>
+
 
     <!-- section 3  -->
     <!-- 이벤트1 -->
@@ -228,6 +322,7 @@
         </p>
         <h4>2024.07.26~2024.07.30</h4>
       </div>
+
     </div>
 
     <!-- section 4 -->
@@ -240,24 +335,28 @@
 
     <!-- 특별관 2 -->
     <div id="special2">
+
       <div id="special-image">
-        <img src="./image/special.png" alt="호텔사진">
+        <img id="sp-img1" src="./image/special01.png" alt="호텔사진">
+        <img id="sp-img2" src="./image/special02.png" alt="호텔사진">
+        <img id="sp-img3" src="./image/special03.png" alt="호텔사진">
+        <img id="sp-img4" src="./image/special04.png" alt="호텔사진">
       </div>
 
       <div id="special-list">
-        <div class="list">
+        <div id="list1">
           <span class="list-bold">SUITE CINEMA</span>
           <span class="gray">#호텔 컨셉의 프리미엄관</span>
         </div>
-        <div class="list">
+        <div id="list2">
           <span class="list-bold">CINE & LIVINGROOM</span>
           <span class="gray">#신개념 소설 영화관</span>
         </div>
-        <div class="list">
+        <div id="list3">
           <span class="list-bold">4DX</span>
           <span class="gray">#모션시트 #오감체험</span>
         </div>
-        <div class="list">
+        <div id="list4">
           <span class="list-bold">CINE de CHEF</span>
           <span class="gray">#쉐프가 있는 영화관</span>
         </div>
@@ -459,6 +558,9 @@
       </div>
     </div>
   </footer>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="cgv.js"></script>
 </body>
 
 </html>

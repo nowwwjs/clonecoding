@@ -29,7 +29,6 @@ const swiper = new Swiper(".swiper", {
 
   slidesPerView: 5, // 한 화면에 5개의 슬라이드 표시
   slidesPerGroup: 5, // 한 번에 5개 슬라이드 넘기기
-  spaceBetween: 30, // 슬라이드 간의 간격
 });
 
 // 3. hover 이벤트

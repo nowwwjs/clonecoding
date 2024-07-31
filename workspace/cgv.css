@@ -448,12 +448,6 @@ html {
   margin-bottom: 100px;
 }
 
-
-
-
-
-
-
 .overlay {
   top: 25%;
   left: 30%;
@@ -533,7 +527,7 @@ html {
   font-size: 20px;
   font-weight: 600;
   overflow: hidden;
-  text-overflow: ellipsis; /* 넘치는 텍스트를 "..."으로 표시 */
+  text-overflow: ellipsis; 
   white-space: nowrap;
   width: 100%;
 }
